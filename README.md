@@ -92,13 +92,7 @@ Microservicio encargado de administrar las órdenes de compra en tránsito de lo
 
 ### Pasos para ejecutar
 
-1. Clonar el repositorio.
-
-El enlace del repositorio, donde aparece:
-
-```bash
-git clone https://github.com/usuario/repositorio.git
-```
+1. Clonar el repositorio. (El enlace en las carpetas de su respectiva API)
 
 2. Crear las bases de datos correspondientes para ambos microservicios.
 
