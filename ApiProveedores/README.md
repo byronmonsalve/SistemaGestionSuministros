@@ -1,5 +1,13 @@
 # API Proveedores
 
+# API Suministros
+
+## Enlace repositorio:
+
+```bash
+https://github.com/juan1990790/api-proveedores
+```
+
 ## Descripción
 
 Microservicio desarrollado para el proyecto **Sistema de Control de Suministros Tecnológicos (CloudTech)** de la asignatura Desarrollo FullStack I.
