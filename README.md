@@ -20,56 +20,51 @@ Además, el sistema incorpora validaciones de datos, manejo de excepciones, regi
 
 ---
 
-## Microservicios implementados
+# Microservicios
 
-### api.suministros
+## api.suministros
 
 Microservicio encargado de administrar el inventario de componentes tecnológicos.
 
-**Funciones principales:**
+### Funcionalidades
 
 - Registrar suministros.
-- Consultar suministros.
-- Actualizar información de suministros.
-- Eliminar suministros (cuando las reglas de negocio lo permiten).
-- Verificar el stock disponible.
-- Consultar información del microservicio de proveedores cuando el stock es menor a 3 unidades.
+- Consultar todos los suministros.
+- Buscar suministros por fabricante.
+- Actualizar suministros.
+- Eliminar suministros según las reglas de negocio.
+- Consultar al microservicio de proveedores cuando el stock es crítico.
 
-### api.proveedores
+---
 
-Microservicio encargado de administrar la información de proveedores e importaciones.
+## api.proveedores
 
-**Funciones principales:**
+Microservicio encargado de administrar las órdenes de compra en tránsito de los fabricantes.
 
-- Registrar proveedores.
-- Consultar proveedores.
-- Actualizar información de proveedores.
-- Eliminar proveedores.
-- Verificar órdenes de compra o cargamentos en tránsito.
+### Funcionalidades
 
-## Rutas principales (Endpoints)
+- Consultar órdenes de compra por fabricante.
+- Entregar información al microservicio api.suministros mediante comunicación REST.
+
+---
+
+# Endpoints
 
 ### api.suministros
- 
+
 | Método | Endpoint | Descripción |
 |---------|----------|-------------|
-| GET | /api/suministros | Obtiene todos los suministros |
-| GET | /api/suministros/{id} | Obtiene un suministro por ID |
-| POST | /api/suministros | Registra un suministro |
-| PUT | /api/suministros/{id} | Actualiza un suministro |
-| DELETE | /api/suministros/{id} | Elimina un suministro |
-| GET | /api/suministros/verificar/{idFabricante} | Verifica el stock y consulta al microservicio de proveedores |
+| GET | /api/v1/suministros | Obtiene la lista de todos los suministros registrados. |
+| GET | /api/v1/suministros/fabricante/{idFabricante} | Consulta un suministro utilizando el identificador del fabricante. |
+| POST | /api/v1/suministros | Registra un nuevo suministro en el inventario. |
+| PUT | /api/v1/suministros/{id} | Actualiza la información de un suministro existente. |
+| DELETE | /api/v1/suministros/{id} | Elimina un suministro del inventario, siempre que las reglas de negocio lo permitan. |
 
 ### api.proveedores
 
 | Método | Endpoint | Descripción |
 |---------|----------|-------------|
-| GET | /api/proveedores | Obtiene todos los proveedores |
-| GET | /api/proveedores/{id} | Obtiene un proveedor por ID |
-| POST | /api/proveedores | Registra un proveedor |
-| PUT | /api/proveedores/{id} | Actualiza un proveedor |
-| DELETE | /api/proveedores/{id} | Elimina un proveedor |
-| GET | /api/proveedores/verificar/{idFabricante} | Consulta importaciones u órdenes de compra en tránsito |
+| GET | /api/v1/ordenes/{idFabricante} | Consulta las órdenes de compra en tránsito asociadas a un fabricante específico. Si existen órdenes registradas, devuelve la información correspondiente; en caso contrario, responde con un estado HTTP 404 (Not Found). |
 
 ---
 
@@ -100,13 +95,21 @@ Microservicio encargado de administrar la información de proveedores e importac
 1. Clonar el repositorio.
 
 El enlace del repositorio, donde aparece:
+
 ```bash
 git clone https://github.com/usuario/repositorio.git
 ```
 
 2. Crear las bases de datos correspondientes para ambos microservicios.
 
-3. Configurar el archivo `application.properties` de cada proyecto con los datos de conexión a la base de datos.
+3. Configurar el archivo application.properties de cada microservicio.
+
+Modificar:
+
+- URL de conexión
+- Usuario
+- Contraseña
+- Puerto del servidor
 
 4. Ejecutar primero el microservicio **api.proveedores**.
 
