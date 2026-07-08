@@ -72,11 +72,11 @@ Microservicio encargado de administrar las órdenes de compra en tránsito de lo
 
 ### api.suministros
 
-...
+http://localhost:21300/swagger-ui/index.html
 
 ### api.proveedores
 
-...
+http://localhost:21301/swagger-ui/index.html
 
 ---
 
