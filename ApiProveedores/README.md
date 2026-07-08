@@ -1,7 +1,5 @@
 # API Proveedores
 
-# API Suministros
-
 ## Enlace repositorio:
 
 ```bash
