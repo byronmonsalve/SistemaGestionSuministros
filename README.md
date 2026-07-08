@@ -53,8 +53,6 @@ Microservicio encargado de administrar la información de proveedores e importac
  
 | Método | Endpoint | Descripción |
 |---------|----------|-------------|
-
-
 | GET | /api/suministros | Obtiene todos los suministros |
 | GET | /api/suministros/{id} | Obtiene un suministro por ID |
 | POST | /api/suministros | Registra un suministro |
@@ -65,8 +63,6 @@ Microservicio encargado de administrar la información de proveedores e importac
 ### api.proveedores
 
 | Método | Endpoint | Descripción |
-
-
 |---------|----------|-------------|
 | GET | /api/proveedores | Obtiene todos los proveedores |
 | GET | /api/proveedores/{id} | Obtiene un proveedor por ID |
@@ -103,6 +99,7 @@ Microservicio encargado de administrar la información de proveedores e importac
 
 1. Clonar el repositorio.
 
+El enlace del repositorio, donde aparece:
 ```bash
 git clone https://github.com/usuario/repositorio.git
 ```
