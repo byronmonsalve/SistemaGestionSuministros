@@ -1,4 +1,4 @@
-# Sistema de Gestión de Suministros -    
+# Sistema de Gestión de Suministros - DESARROLLO FULLSTACK I_006V
 
 ## Descripción del contexto
 
