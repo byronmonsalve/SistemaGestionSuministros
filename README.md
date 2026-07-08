@@ -105,9 +105,9 @@ Modificar:
 - Contraseña
 - Puerto del servidor
 
-4. Ejecutar primero el microservicio **api.proveedores**.
+4. Ejecutar primero el microservicio **api.suministros**.
 
-5. Ejecutar posteriormente el microservicio **api.suministros**.
+5. Ejecutar posteriormente el microservicio **api.proveedores**.
 
 6. Acceder a la documentación Swagger desde el navegador utilizando los enlaces indicados anteriormente.
 
@@ -125,6 +125,7 @@ Modificar:
 - Git
 - GitHub
 - IntelliJ IDEA
+- Mockito
 
 ---
 
