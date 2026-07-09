@@ -99,7 +99,6 @@ http://localhost:21301/swagger-ui/index.html
 3. Configurar el archivo application.properties de cada microservicio.
 
 Modificar:
-
 - URL de conexión
 - Usuario
 - Contraseña
